@@ -28,10 +28,10 @@ arch = [
     to_connection(of="layer4", to="layer5"),
 
     to_Fc("layer6", nx=2, ny=3, nz=2, offset="(3,0,0)", to="(layer5-east)", radius=2.5, opacity=0.6, width=15, height=22.5, depth=15,
-          withBox=True, withConnections=False, logo=[1,2], numLogoY=2, numLogoX=1, numLogoZ=1, color="{rgb:blue,5;green,2.5;white,5}"),
+          withBox=True, withConnections=False, logo=["I","II"], numLogoY=2, numLogoX=2, numLogoZ=1, color="{rgb:blue,5;green,2.5;white,5}" ),
     to_connection(of="layer5", to="layer6"),
     to_Fc("layer7", nx=2, ny=3, nz=2, offset="(3,0,0)", to="(layer6-east)", width=15, height=22.5, depth=15, withBalls=False),
-    to_connection(of="layer6", to="layer7"),
+    to_connection(of="layer6", to="layer7" ),
     to_Sum("layer8", offset="(1.5,0,0)", to="(layer7-east)", radius=2.5, opacity=0.6),
     to_connection(of="layer7", to="layer8"),
     to_end()
